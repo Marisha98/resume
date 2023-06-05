@@ -1,0 +1,114 @@
+<div>
+    <ul>
+        {{#each program}}
+        {{!-- array of {{program.excursion}} --}}
+
+
+        <li>
+            <div>
+                <h2>{{name}}</h2>
+            </div>
+
+            <br>
+
+            <div>Type: {{type}}</div>
+
+            <br>
+
+            <div>Duration: <em>{{duration}}</em></div>
+
+            <br>
+
+            {{#if details}}
+            <div>Details:</div>
+
+            <br>
+            {{#with details}}
+            <div>Place: {{#if museum}} "{{museum.name}}" {{else}} "{{venue.name}}"{{/if}}</div>
+
+            <br>
+
+            <div>Location: </div>
+
+            <br>
+
+            <div>
+                {{#if museum}}
+                {{#with museum}}
+                {{> location}}
+                {{/with}}
+                {{else}}
+                {{#with venue}}
+                {{> location}}
+                {{/with}}
+                {{/if}}
+            </div>
+            <br>
+
+            <div>
+                {{#if museum}}
+
+                <b>Exhibits:</b>
+
+                <ul>
+                    <br>
+                    {{#each museum.exhibits}}
+                    <li>
+                        <div>
+                            <b>"{{name}}"</b> - <p>{{description}}</p>
+                        </div>
+                        <div>
+                            {{#if artist}} <p>Artist: {{artist}}</p> {{/if}}
+                        </div>
+                        <div>
+                            {{#if audio_guide}} Audio guide : + {{/if}}
+                        </div>
+                    </li>
+                    <br>
+                    {{/each}}
+                </ul>
+
+            </div>
+
+            {{/if}}
+
+            <br>
+
+            <div>
+                {{#if performers}}
+
+                <b>Performers:</b>
+
+                <br>
+
+                {{#each performers}}
+
+                <br>
+
+                <div>
+                    <ul>
+                        <li>{{name}} - {{type}}</li>
+                    </ul>
+                </div>
+                {{/each}}
+
+                <br>
+
+                {{/if}}
+            </div>
+
+            {{> guide}}
+
+
+            {{/with}}
+            {{/if}}
+
+            <br>
+            {{/each}}
+
+        </li>
+
+    </ul>
+
+
+</div>
