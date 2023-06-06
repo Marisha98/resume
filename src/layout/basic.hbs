@@ -2,12 +2,17 @@
 Це леяут по замовчюванню, котрий вже містить базову структуру HTML документа
 І котрий обгортає код container файлів для будь-яких ендпоїнтів
 --}}
+
+
+{{!-- цей леяут для page --}}
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
 	<title>
-		Bio page
+		{{page.title}}
 	</title>
 	<meta charset='utf-8' />
 	<link href='css/index.css' rel='stylesheet' />
@@ -15,9 +20,6 @@
 
 <body>
 
-	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
-
-</body>
 
 </html>

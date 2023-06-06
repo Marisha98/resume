@@ -1,0 +1,88 @@
+<div>
+    {{#with elements}}
+    <div>Elements:</div>
+    <br>
+    {{/with}}
+
+    <ol>
+        {{#each elements}}
+        <li>
+            <div>Tag- "{{name}}"</div>
+            <br>
+
+            <div>{{description}}</div>
+
+            <br>
+
+            <section>
+                <div><i>Attributes:</i>
+                    <p>{{#each attributes}}
+                    <ul>
+                        <li><b>{{name}}:</b> {{description}}</li>
+                    </ul> {{/each}}</p>
+                </div>
+            </section>
+        </li>
+        {{/each}}
+    </ol>
+</div>
+
+<div>
+    {{#with properties}}
+    <div>Properties:</div>
+    <br>
+    {{/with}}
+
+    <ol>
+        {{#each properties}}
+        <li>
+            <div>"{{name}}"</div>
+            <br>
+
+            <div>{{description}}</div>
+
+            <br>
+
+            <section>
+                <div><i>Values:</i>
+                    <p>{{#each values}}
+                    <ul>
+                        <li><b>{{value}}:</b> {{description}}</li>
+                    </ul> {{/each}}</p>
+                </div>
+            </section>
+        </li>
+        {{/each}}
+    </ol>
+</div>
+
+<div>
+    {{#with functions}}
+    <div>Functions:</div>
+    <br>
+    {{/with}}
+
+    <ol>
+        {{#each functions}}
+        <li>
+            <div>"{{name}}"</div>
+
+            <br>
+
+            <div>{{description}}</div>
+
+            <br>
+
+            <section>
+                <div><i>Parametrs:</i>
+                    <p>{{#each parameters}}
+                    <ul>
+                        <li><b>{{name}} ({{type}}):</b> {{description}}</li>
+                    </ul> {{/each}}</p>
+                </div>
+            </section>
+        </li>
+        {{/each}}
+    </ol>
+
+</div>
