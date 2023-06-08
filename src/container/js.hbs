@@ -1,25 +1,164 @@
 <div>
+    <section>
 
-    <div>
-        <h1>{{name}}</h1>
-    </div>
+        <div>
+            <h1>{{name}}</h1>
+        </div>
 
-    <p>{{description}}</p>
+        <p>{{description}}</p>
 
-    <br>
+        <br>
 
-    {{#with history}}
-    <p>Appeared: {{year}}</p>
-    <p>Founder: {{founder}}</p>
-    {{/with}}
+        {{#with history}}
+        <p>Appeared: {{year}} year</p>
+        <p>Founder: {{founder}}</p>
+        {{/with}}
 
-    <br>
+        <br>
+
+        <div>
+            <span class="badge text-bg-danger">Types:</span>
+
+            {{#each types}}{{this}}/
+
+            {{/each}}
+        </div>
+
+        <div>
+            <span class="badge text-bg-danger">Syntax:</span>
+
+            {{#with syntax}}
+
+            <div>
+                <section>
+                    <div>
+                        <span class="badge text-bg-light">Variables</span>
+
+                        <br>
+
+                        {{#each variables}}
+
+                        <li>{{this}}</li>
+
+                        {{/each}}
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge text-bg-light">Functions</span>
+
+                        <br>
+
+                        {{#each functions}}
+
+                        <li>{{this}}</li>
+
+                        {{/each}}
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge text-bg-light">Conditionals</span>
+
+                        <br>
+
+                        {{#each conditionals}}
+
+                        <li>{{this}}</li>
+
+                        {{/each}}
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge text-bg-light">Loops</span>
+
+                        <br>
+
+                        {{#each loops}}
+
+                        <li>{{this}}</li>
+
+                        {{/each}}
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge text-bg-light">Classes</span>
+
+                        <br>
+
+                        {{#each classes}}
+
+                        <li>{{this}}</li>
+
+                        {{/each}}
+                    </div>
+                    {{/with}}
+
+
+                    <br>
+
+                    <div>
+                        <span class="badge rounded-pill text-bg-success">Features:</span>
+
+                        <ul>
+                            {{#each features}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge rounded-pill text-bg-warning">Libraries:</span>
+
+                        <ul>
+                            {{#each libraries}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge rounded-pill text-bg-secondary">Tools:</span>
+
+                        <ul>
+                            {{#each tools}}
+                            <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <span class="badge rounded-pill text-bg-info">Community:</span>
+
+                        <ul>
+                            {{#each community}}
+                            <li>{{name}} ({{type}})</li>
+                            {{/each}}
+                        </ul>
+                    </div>
 
 
 
-    <div>
-    </div>
+                </section>
+            </div>
+        </div>
 
 
 
+
+
+
+    </section>
 </div>
