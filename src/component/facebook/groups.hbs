@@ -1,0 +1,25 @@
+<section>
+    {{#if groups}}
+    <div><span class="badge text-bg-warning">Groups</span>
+    </div>
+
+    <br>
+
+    {{#each groups}}
+
+    <div>{{id}} - {{name}} </div>
+
+    <p><i>{{description}}</i></p>
+
+    <div class="alert alert-light" role="alert">
+        <div><b><i>Members</i></b></div>
+        {{#each members}}
+
+        {{> facebook/id}}
+
+        {{/each}}
+    </div>
+
+    {{/each}}
+    {{/if}}
+</section>
