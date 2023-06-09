@@ -1,0 +1,200 @@
+<div>
+    <section>
+
+
+
+        <div>
+            <h1>{{name}}</h1>
+        </div>
+
+        <br>
+        <p><em>{{category}}</em></p>
+
+        <p>{{description}}</p>
+
+        <p>
+            <button type="button" class="btn btn-success">Price: {{price}}</button>
+        </p>
+
+        <hr>
+
+        {{#with features}}
+        <div>
+            <h3>
+                <span class="badge text-bg-light">Features:</span>
+            </h3>
+
+
+            <section>
+                {{#with processor}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Processor</b></h5>
+
+                    <li>brand: {{brand}}</li>
+                    <li>model: {{model}}</li>
+                    <li>speed: {{speed}}</li>
+                    <li>cores: {{cores}}</li>
+                    <li>cache: {{cache}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+            <section>
+                {{#with memory}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Memory</b></h5>
+
+                    <li>type: {{type}}</li>
+                    <li>size: {{size}}</li>
+                    <li>speed: {{speed}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+            <section>
+                {{#with storage}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Storage</b></h5>
+
+                    <li>type: {{type}}</li>
+                    <li>size: {{size}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+            <section>
+                {{#with display}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Display</b></h5>
+
+                    <li>size: {{size}}</li>
+                    <li>resolution: {{resolution}}</li>
+                    <li>technology: {{technology}}</li>
+                    <li>color space: {{color_space}}</li>
+                    <li>brightness: {{brightness}}</li>
+                    <li>refresh_rate: {{refresh_rate}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+
+            <section>
+                {{#with graphics}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Graphics</b></h5>
+
+                    <li>brand: {{brand}}</li>
+                    <li>model: {{model}}</li>
+                    <li>memory: {{memory}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+            <section>
+
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Ports</b></h5>
+
+                    {{#each ports}}
+                    <ul>
+                        <li>type: {{type}}</li>
+                        <li>count: {{count}}</li>
+
+                        {{#if features}}
+                        <li>
+                            <b>Features:</b>
+                            {{#each features}}
+
+                            <ol>{{this}}</ol>
+
+                            {{/each}}
+
+                        </li>
+                        {{/if}}
+                    </ul>
+                    {{/each}}
+
+                </div>
+
+            </section>
+
+
+            <section>
+                {{#with battery}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Battery</b></h5>
+
+                    <li>type: {{type}}</li>
+                    <li>capacity: {{capacity}}</li>
+                    <li>life: {{life}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+            <section>
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Weight</b></h5>
+
+                    <div>{{weight}}</div>
+                </div>
+            </section>
+
+            <section>
+                {{#with dimensions}}
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Dimensions</b></h5>
+
+                    <li>height: {{height}}</li>
+                    <li>width: {{width}}</li>
+                    <li>depth: {{depth}}</li>
+
+                </div>
+                {{/with}}
+            </section>
+
+            <section>
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Operating System</b></h5>
+
+                    <div>{{operating_system}}</div>
+                </div>
+            </section>
+
+            <section>
+                <div class="alert alert-dark" role="alert">
+                    <h5><b>Accessories</b></h5>
+                    {{#each accessories}}
+
+                    <div>{{name}}</div>
+
+
+                    <h5><span class="badge text-bg-success">{{price}} $</span></h5>
+
+                    <hr>
+
+                    {{/each}}
+                </div>
+            </section>
+
+
+            {{/with}}
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+</div>
