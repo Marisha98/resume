@@ -1,0 +1,195 @@
+<main>
+
+    <div class="row gy-3">
+
+
+        <div class="col-12">
+            <div class="row gy-4 gx-2">
+                {{#with navigation}}
+
+                <div class="col-2 gx-2"><a href="{{links.[0].href}}" class="btn btn-link">{{links.[0].text}}</a></div>
+
+                <div class="col-2 gx-2"><a href="{{links.[1].href}}" class="btn btn-link">{{links.[1].text}}</a></div>
+
+                <div class="col-2 gx-2"><a href="{{links.[2].href}}" class="btn btn-link">{{links.[2].text}}</a></div>
+
+                <div class="col-2 gx-2"><a href="{{button.href}}" class="btn btn-primary">{{button.text}}</a></div>
+
+                {{/with}}
+            </div>
+
+        </div>
+
+        <hr>
+
+        <section>
+            {{#with header}}
+            <h1>{{title}}</h1>
+
+            <p>{{description}}</p>
+
+            <a href="{{button.link}}" class="btn btn-primary">{{button.text}}</a>
+
+            {{/with}}
+        </section>
+
+        <hr>
+
+        <section>
+            {{#with city}}
+
+
+            <h2>{{title}}</h2>
+
+            <section class="col-12">
+                <div class="row gy-4 gx-2">
+
+
+                    <div class="col-5">
+                        <div class="card">
+                            <img class="card-img-top" src="{{cards.[0].picture.src}}" alt="{{cards.[0].picture.alt}}">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">{{cards.[0].title}}</h5>
+
+                                <p>{{cards.[0].description}}</p>
+
+                                <a href="{{cards.[0].button.href}}"
+                                    class="btn btn-primary">{{cards.[0].button.text}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="card">
+                            <img class="card-img-top" src="{{cards.[1].picture.src}}" alt="{{cards.[1].picture.alt}}">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">{{cards.[1].title}}</h5>
+
+                                <p>{{cards.[1].description}}</p>
+
+                                <a href="{{cards.[1].button.href}}"
+                                    class="btn btn-primary">{{cards.[1].button.text}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="card">
+                            <img class="card-img-top" src="{{cards.[2].picture.src}}" alt="{{cards.[2].picture.alt}}">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">{{cards.[2].title}}</h5>
+
+                                <p>{{cards.[2].description}}</p>
+
+                                <a href="{{cards.[2].button.href}}"
+                                    class="btn btn-primary">{{cards.[2].button.text}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-5">
+                        <div class="card">
+                            <img class="card-img-top" src="{{cards.[3].picture.src}}" alt="{{cards.[3].picture.alt}}">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">{{cards.[3].title}}</h5>
+
+                                <p>{{cards.[3].description}}</p>
+
+                                <a href="{{cards.[3].button.href}}"
+                                    class="btn btn-primary">{{cards.[3].button.text}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </section>
+
+            {{/with}}
+        </section>
+
+        <hr>
+
+        <section class="col-12">
+            {{#with winner}}
+            <h2>{{title}}</h2>
+
+            <br>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>
+                            name
+                        </th>
+                        <th>
+                            surname
+                        </th>
+                        <th>
+                            nickname
+                        </th>
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    <tr>
+                        <td>{{table.user.[0].place}}</td>
+                        <td>{{table.user.[0].name}}</td>
+                        <td>{{table.user.[0].surname}}</td>
+                        <td>{{table.user.[0].nickname}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{table.user.[1].place}}</td>
+                        <td>{{table.user.[1].name}}</td>
+                        <td>{{table.user.[1].surname}}</td>
+                        <td>{{table.user.[1].nickname}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>{{table.user.[2].place}}</td>
+                        <td>{{table.user.[2].name}}</td>
+                        <td>{{table.user.[2].surname}}</td>
+                        <td>{{table.user.[2].nickname}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            {{/with}}
+        </section>
+
+        <hr>
+
+        <section class="col-12">
+            {{#with gallery}}
+
+
+            {{/with}}
+    </div>
+    </section>
+
+
+
+
+
+
+    </div>
+
+</main>
