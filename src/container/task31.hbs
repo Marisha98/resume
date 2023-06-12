@@ -389,20 +389,6 @@
                 {{#with footer}}
                 <h5>{{title}}</h5>
 
-                <div class="col-3 gx-2"><a href="{{navigation.[0].href}}"
-                        class="btn btn-link">{{navigation.[0].text}}</a>
-                </div>
-
-                <div class="col-3 gx-2"><a href="{{navigation.[1].href}}"
-                        class="btn btn-outline-dark">{{navigation.[1].text}}</a>
-                </div>
-
-                <div class="col-3 gx-2"><a href="{{navigation.[2].href}}"
-                        class="btn btn-outline-info">{{navigation.[2].text}}</a>
-                </div>
-
-
-
 
                 <div class="col-3 gx-2"><a href="{{navigation.[0].href}}"
                         class="btn btn-link">{{navigation.[0].text}}</a>
@@ -412,10 +398,36 @@
                         class="btn btn-outline-dark">{{navigation.[1].text}}</a>
                 </div>
 
-                <div class="col-3 gx-2"><a href="{{navigation.[2].href}}"
+                <div class="col-5 gx-2"><a href="{{navigation.[2].href}}"
                         class="btn btn-outline-info">{{navigation.[2].text}}</a>
                 </div>
 
+
+
+
+                <div class="col-3 gx-2"><a href="{{socialMedia.[0].link}}"
+                        class="btn btn-link">{{socialMedia.[0].name}}</a>
+                </div>
+
+                <div class="col-3 gx-2"><a href="{{socialMedia.[1].link}}"
+                        class="btn btn-outline-dark">{{socialMedia.[1].name}}</a>
+                </div>
+
+                <div class="col-5 gx-2"><a href="{{socialMedia.[2].link}}"
+                        class="btn btn-outline-info">{{socialMedia.[2].name}}</a>
+                </div>
+
+
+                <div class="col-3 gx-2"><a href="{{partners.[0].link}}" class="btn btn-link">{{partners.[0].name}}</a>
+                </div>
+
+                <div class="col-3 gx-2"><a href="{{partners.[1].link}}"
+                        class="btn btn-outline-dark">{{partners.[1].name}}</a>
+                </div>
+
+                <div class="col-5 gx-2"><a href="{{partners.[2].link}}"
+                        class="btn btn-outline-info">{{partners.[2].name}}</a>
+                </div>
 
                 {{/with}}
 
