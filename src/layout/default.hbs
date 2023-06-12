@@ -13,21 +13,20 @@
 	<link href='css/index.css' rel='stylesheet' />
 </head>
 
-<body>
+<body class="p-5">
 	{{#with header}}
 	<header>
-		<div>
+		<div class="mb-2">
 			<h1>{{name.firstname}} {{name.lastname}}</h1>
 		</div>
-		<div>
+		<div class="mb-2">
 			<b>{{position}}</b>
 		</div>
-		<br>
-		<div>
+
+		<div class="mb-2">
 			<em>{{salary}}</em>
 		</div>
 		<hr>
-		<br>
 		<div>
 			<address>{{address}}</address>
 		</div>
@@ -39,7 +38,7 @@
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
 
-	<hr>
+	<hr class="my-2">
 
 	{{> footer}}
 </body>
