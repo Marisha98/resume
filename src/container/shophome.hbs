@@ -63,51 +63,67 @@
 
     <hr>
 
+    <div class="row">
+        <div class="col-12 my-4">
+            <div class="nav nav-tabs">
+                {{#with goodsBlock}}
+
+
+                {{#each tabs}}
+                <div class="nav-item col-2 mx-3">
+                    <div class="nav-link">
+                        {{text}}
+                    </div>
+                </div>
+
+                {{/each}}
+
+                {{!-- <div class="nav-item col-2">
+                    <div class="nav-link">{{tabs.[1].text}}</div>
+                </div>
+
+                <div class="nav-item col-2">
+                    <div class="nav-link">{{tabs.[2].text}}</div>
+                </div>
+
+                <div class="nav-item col-2">
+                    <div class="nav-link disabled">{{tabs.[3].text}}</div>
+                </div> --}}
+
+            </div>
+        </div>
+    </div>
+
+
+
+
     <div class="col-12 py-4">
         <div class="row">
-            {{#with goodsBlock}}
+            {{#each cards}}
 
-            {{#each tabs}}
+            <div class="col-4 py-3">
+                <div class="card">
+                    <img class="card-img-top" src="{{image}}">
 
-            <div class="col-2">
-                <div class="nav nav-tabs">
-
-                    {{#if isActive}}
-                    <div class="nav-item">
-
+                    <div class="card-body">
+                        <div class="row">
+                            <h5 class="card-title col-9">{{title}}</h5>
+                            <div class="col-3 ps-0">
+                                {{#if isHot}}
+                                <span class="badge rounded-pill text-bg-warning">Hot</span>
+                                {{else}}
+                                <span class="badge rounded-pill text-bg-primary">New</span>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <p>{{description}}</p>
                     </div>
-
-
-                    {{/if}}
-
                 </div>
             </div>
             {{/each}}
-
-
-
-
-
-
-
-
-
-            <div class="col-5">
-                <div class="card">
-                    <img class="card-img-top" src="{{cards.[0].picture.src}}" alt="{{cards.[0].picture.alt}}">
-
-                    <div class="card-body">
-
-                        <h5 class="card-title">{{cards.[0].title}}</h5>
-
-                        <p>{{cards.[0].description}}</p>
-
-                        <a href="{{cards.[0].button.href}}" class="btn btn-primary">{{cards.[0].button.text}}</a>
-                    </div>
-                </div>
-            </div>
-            {{/with}}
         </div>
     </div>
+
+    {{/with}}
 
 </main>
