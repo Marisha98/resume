@@ -6,6 +6,7 @@
         <div class="col-12">
             {{#with navigation}}
             <div class="nav">
+
                 <div class="nav-item">
                     <a href="{{links.[0].href}}" class="nav-link active">{{links.[0].text}}</a>
                 </div>
@@ -36,7 +37,7 @@
         <div class="row">
             {{#each cards}}
             <div class="col-3 my-1">
-                <div class="card text-bg-dark">
+                <div class="card h-100 text-bg-dark">
                     <div class="card-header">
                         <h6 class="card-title">{{title}}</h6>
 
@@ -65,31 +66,31 @@
 
     <div class="row">
         <div class="col-12 my-4">
-            <div class="nav nav-tabs">
+            <div class="nav nav-tabs m-0">
                 {{#with goodsBlock}}
 
-
                 {{#each tabs}}
-                <div class="nav-item col-2 mx-3">
-                    <div class="nav-link">
+                <div class="nav-item">
+
+                    {{#if isActive}}
+                    <a class="nav-link active">
                         {{text}}
-                    </div>
-                </div>
+                    </a>
 
+                    {{else}}
+                    {{#if isDisabled}}
+                    <a class="nav-link disabled">
+                        {{text}}
+                    </a>
+                    {{else}}
+                    <a class="nav-link">
+                        {{text}}
+                    </a>
+                    {{/if}}
+                    {{/if}}
+
+                </div>
                 {{/each}}
-
-                {{!-- <div class="nav-item col-2">
-                    <div class="nav-link">{{tabs.[1].text}}</div>
-                </div>
-
-                <div class="nav-item col-2">
-                    <div class="nav-link">{{tabs.[2].text}}</div>
-                </div>
-
-                <div class="nav-item col-2">
-                    <div class="nav-link disabled">{{tabs.[3].text}}</div>
-                </div> --}}
-
             </div>
         </div>
     </div>
@@ -102,7 +103,7 @@
             {{#each cards}}
 
             <div class="col-4 py-3">
-                <div class="card">
+                <div class="card h-100">
                     <img class="card-img-top" src="{{image}}">
 
                     <div class="card-body">
@@ -121,9 +122,70 @@
                 </div>
             </div>
             {{/each}}
+            {{/with}}
         </div>
     </div>
 
-    {{/with}}
+    <hr>
+
+    <div class="col-12">
+        <div class="card text-bg-dark">
+            <div class="row">
+                {{#with subscribe}}
+                <div class="card-body py-2 ms-1">
+
+                    <h2>{{header}}</h2>
+
+                    <p>{{description}}</p>
+
+                    {{#each buttons}}
+                    <p class="mb-0"><a href="{{link}}" class="btn btn-primary my-1">{{text}}</a></p>
+                    {{/each}}
+
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="col-12">
+        <div class="card text-bg-success text-center">
+            <div class="row">
+                {{#with service}}
+                <div class="card-body py-2 ms-1">
+
+                    <h2>{{title}}</h2>
+
+                    <p>{{description}}</p>
+
+                    {{#each buttons}}
+                    <p class="mb-0"><a href="{{link}}" class="btn btn-primary my-1">{{text}}</a></p>
+                    {{/each}}
+
+                </div>
+                {{/with}}
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div class="row">
+        {{#each footer}}
+        <div class="nav col-2">
+            <table>
+                <tbody>
+                    <tr><a href="{{[0].link}}" class="nav nav-link py-0">{{[0].text}}</a></tr>
+                    <tr><a href="{{[1].link}}" class="nav nav-link">{{[1].text}}</a></tr>
+                    <tr><a href="{{[2].link}}" class="nav nav-link">{{[2].text}}</a></tr>
+                    <tr><a href="{{[3].link}}" class="nav nav-link disabled">{{[3].text}}</a></tr>
+                </tbody>
+            </table>
+        </div>
+        {{/each}}
+    </div>
 
 </main>
