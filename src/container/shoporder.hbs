@@ -1,4 +1,92 @@
 <div>
+    <hr>
 
-    gvdfrgdfg
-</div>
+    <div class="row my-1">
+        <div class="col-12">
+            {{#with navigation}}
+            <div class="nav">
+
+                {{#each links}}
+                <div class="nav-item">
+                    {{#if href value="null"}}
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                    {{else}}
+                    <a href="{{href}}" class="nav-link disabled">{{text}}</a>
+                    {{/if}}
+                </div>
+                {{/each}}
+                {{/with}}
+            </div>
+
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div class="col-12">
+        <div class="row g-5">
+            <div class="pt-3">
+                <h1>{{header}}</h1>
+            </div>
+            {{#with contacts_data}}
+
+            <div class="col 8">
+                <div class="row">
+                    <h4>{{title}}</h4>
+
+
+                    <div class="my-2">
+                        {{#each buttons}}
+                        {{#if isPrimary}} <button class="btn btn-warning">{{text}}</button> {{/if}}
+                        {{#if isOutline}} <button class="btn btn-outline-warning">{{text}}</button> {{/if}}
+                        {{/each}}
+                    </div>
+
+
+
+                    {{#with form}}
+                    {{#with input}}
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <label class="form-label mb-0">{{name.label}}</label>
+                            <input class="form-control mt-0 " "type=text placeholder={{name.placeholder}} ">
+                            <div class=" form-text text mt-0">{{name.caption}}</div>
+                        </div>
+                        <div class="col-4 px-0">
+                            <label class="form-label mb-0">{{surname.label}}</label>
+                            <input class="form-control mt-0 " "type=text placeholder={{surname.placeholder}} ">
+                            <div class=" form-text text mt-0">{{surname.caption}}</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label class="form-label mb-0">{{phone.label}}</label>
+                            <input class="form-control mt-0 " "type=text placeholder={{phone.placeholder}} ">
+                            <div class=" form-text text mt-0 mb-4">{{phone.caption}}</div>
+                        </div>
+                        <div class="col-4 px-0">
+                            <label class="form-label mb-0">{{email.label}}</label>
+                            <input class="form-control mt-0 " "type=text placeholder={{email.placeholder}} ">
+                            <div class=" form-text text mt-0 mb-4">{{email.caption}}</div>
+                        </div>
+                    </div>
+                    {{/with}}
+                    {{/with}}
+
+                    <hr>
+
+
+
+
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>

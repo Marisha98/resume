@@ -2,26 +2,20 @@
 
     <hr>
 
-    <div class="row my-2">
+    <div class="row my-1">
         <div class="col-12">
             {{#with navigation}}
             <div class="nav">
 
+                {{#each links}}
                 <div class="nav-item">
-                    <a href="{{links.[0].href}}" class="nav-link active">{{links.[0].text}}</a>
+                    {{#if href value="null"}}
+                    <a href="{{href}}" class="nav-link">{{text}}</a>
+                    {{else}}
+                    <a href="{{href}}" class="nav-link disabled">{{text}}</a>
+                    {{/if}}
                 </div>
-
-                <div class="nav-item">
-                    <a href="{{links.[1].href}}" class="nav-link active">{{links.[1].text}}</a>
-                </div>
-
-                <div class="nav-item">
-                    <a href="{{links.[2].href}}" class="nav-link active">{{links.[2].text}}</a>
-                </div>
-
-                <div class="nav-item">
-                    <a href="#" class="nav-link disabled">Extra</a>
-                </div>
+                {{/each}}
 
             </div>
             {{/with}}
