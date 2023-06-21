@@ -1,0 +1,27 @@
+<table class="table">
+    <tbody>
+        <tr>
+            <td class="col-3,5">
+                <div>{{number}}</div>
+                <b>{{status}}</b>
+            </td>
+            <td>
+                <div>{{amount.title}}</div>
+                <b>{{amount.value}}</b>
+            </td>
+            <td class="col-5 m-0">
+                <div class="row">
+                    {{#each images}}
+                    <img class="my-image" src="{{this}}" alt="itemList" style="width: 100px; height: auto;">
+                    {{/each}}
+                </div>
+            </td>
+            <td class="col-2 ps-0 pe-0 text-end">{{#with button}}
+                {{#if isPrimary}}
+                <a href="{{link}}" type="button" class="btn btn-primary">{{text}}</a>
+                {{/if}}
+                {{/with}}
+            </td>
+        </tr>
+    </tbody>
+</table>
