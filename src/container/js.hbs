@@ -7,22 +7,19 @@
 
         <p>{{description}}</p>
 
-        <br>
+
 
         {{#with history}}
         <p>Appeared: {{year}} year</p>
         <p>Founder: {{founder}}</p>
-        {{/with}}
-
-        <br>
-
-        <div>
+        <div class="py-2">
             <span class="badge text-bg-danger">Types:</span>
 
             {{#each types}}{{this}}/
 
             {{/each}}
         </div>
+        {{/with}}
 
         <div>
             <span class="badge text-bg-danger">Syntax:</span>
@@ -31,11 +28,8 @@
 
             <div>
                 <section>
-                    <div>
+                    <div class="py-2">
                         <span class="badge text-bg-light">Variables</span>
-
-                        <br>
-
                         {{#each variables}}
 
                         <li>{{this}}</li>
@@ -43,13 +37,9 @@
                         {{/each}}
                     </div>
 
-                    <br>
 
-                    <div>
+                    <div class="py-2">
                         <span class="badge text-bg-light">Functions</span>
-
-                        <br>
-
                         {{#each functions}}
 
                         <li>{{this}}</li>
@@ -57,12 +47,8 @@
                         {{/each}}
                     </div>
 
-                    <br>
-
-                    <div>
+                    <div class="py-2">
                         <span class="badge text-bg-light">Conditionals</span>
-
-                        <br>
 
                         {{#each conditionals}}
 
@@ -71,12 +57,8 @@
                         {{/each}}
                     </div>
 
-                    <br>
-
-                    <div>
+                    <div class="py-2">
                         <span class="badge text-bg-light">Loops</span>
-
-                        <br>
 
                         {{#each loops}}
 
@@ -85,13 +67,10 @@
                         {{/each}}
                     </div>
 
-                    <br>
 
-                    <div>
+
+                    <div class="py-2">
                         <span class="badge text-bg-light">Classes</span>
-
-                        <br>
-
                         {{#each classes}}
 
                         <li>{{this}}</li>
@@ -101,10 +80,10 @@
                     {{/with}}
 
 
-                    <br>
 
-                    <div>
-                        <span class="badge rounded-pill text-bg-success">Features:</span>
+
+                    <div class="py-2">
+                        <span class="badge rounded-pill text-bg-success my-2">Features:</span>
 
                         <ul>
                             {{#each features}}
@@ -113,10 +92,10 @@
                         </ul>
                     </div>
 
-                    <br>
 
-                    <div>
-                        <span class="badge rounded-pill text-bg-warning">Libraries:</span>
+
+                    <div class="py-2">
+                        <span class="badge rounded-pill text-bg-warning my-2">Libraries:</span>
 
                         <ul>
                             {{#each libraries}}
@@ -125,10 +104,10 @@
                         </ul>
                     </div>
 
-                    <br>
 
-                    <div>
-                        <span class="badge rounded-pill text-bg-secondary">Tools:</span>
+
+                    <div class="py-2">
+                        <span class="badge rounded-pill text-bg-secondary my-2">Tools:</span>
 
                         <ul>
                             {{#each tools}}
@@ -137,10 +116,10 @@
                         </ul>
                     </div>
 
-                    <br>
 
-                    <div>
-                        <span class="badge rounded-pill text-bg-info">Community:</span>
+
+                    <div class="py-2">
+                        <span class="badge rounded-pill text-bg-info my-2">Community:</span>
 
                         <ul>
                             {{#each community}}
@@ -149,16 +128,9 @@
                         </ul>
                     </div>
 
-
-
                 </section>
             </div>
         </div>
-
-
-
-
-
 
     </section>
 </div>
