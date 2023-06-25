@@ -4,25 +4,25 @@
         <h1>{{name}}</h1>
     </div>
     <section>
-        <div>
-            <em>{{age}} y.o., {{gender}}</em>
+        <div class="py-3">
+            {{age}} y.o., {{gender}}
         </div>
-        <br>
-        <div>
+
+        <div class="py-3">
             {{#with address}}
             <address>{{country}}, {{state}} state, {{city}}, {{street}}, {{zip}} </address>
             {{/with}}
         </div>
     </section>
-    <br>
+
     <hr>
-    <br>
+
 
     <section>
-        <div>
+        <div class="py-3">
             {{> title data="Education" big=true}}
 
-            <div>
+            <div class="py-3">
                 <ul>
                     {{#each education}}
                     <li>{{degree}}/{{major}}, {{university}}, {{graduationYear}}</li>
@@ -33,26 +33,26 @@
     </section>
 
     <hr>
-    <br>
+
 
     <section>
-        <div>{{> title data="Work experience" big=true}}</div>
+        <div class="py-3">{{> title data="Work experience" big=true}}</div>
 
-        <div>
+        <div class="py-3">
             {{#each workExperience}}
-            <div><b>Company: </b>{{company}}</div>
+            <div class="py-3"><b>Company: </b>{{company}}</div>
 
-            <br>
 
-            <div><b>Position: </b>{{title}}</div>
 
-            <br>
+            <div class="py-3"><b>Position: </b>{{title}}</div>
 
-            <div><b>Duration: </b>{{startDate}} - {{endDate}}</div>
 
-            <br>
 
-            <div>
+            <div class="py-3"><b>Duration: </b>{{startDate}} - {{endDate}}</div>
+
+
+
+            <div class="py-3">
                 <b>Responsibilities: </b>
                 <ul>
                     {{#each responsibilities}}
@@ -61,70 +61,70 @@
                 </ul>
             </div>
 
-            <br>
 
-            <div><b>Year founded: </b>{{year_founded}}</div>
 
-            <br>
+            <div class="py-3"><b>Year founded: </b>{{year_founded}}</div>
 
-            <div><b>Industry: </b>{{industry}}</div>
+
+
+            <div class="py-3"><b>Industry: </b>{{industry}}</div>
             <hr>
-            <br>
-            <div>
+
+            <div class="py-3">
                 {{> title data="Employees:" big=null}}
 
                 <section>
                     {{#each employees}}
-                    <div>
+                    <div class="py-3">
                         <b>Name: </b> {{name}}
                     </div>
-                    <br>
-                    <div>
+
+                    <div class="py-3">
                         <b>Position: </b> {{position}}
                     </div>
-                    <br>
-                    <div>
+
+                    <div class="py-3">
                         <b>Department: </b> {{department}}
                     </div>
 
                     <section>
-                        <div>
+                        <div class="py-3">
                             {{> title data="Projects:" big=null}}
                         </div>
                         <section>
                             {{#each projects}}
-                            <div>
+                            <div class="py-3">
                                 <b>Name: </b> {{name}}
                             </div>
-                            <br>
-                            <div>
+
+                            <div class="py-3">
                                 <b>Description: </b> {{description}}
                             </div>
-                            <br>
-                            <div>
+
+                            <div class="py-3">
                                 <b>Status: </b> {{status}}
                             </div>
-                            <br>
+
 
                             <section>
-                                <div>
+                                <div class="py-1">
                                     {{> title data="Team:" big=null}}
                                 </div>
 
                                 {{#each teams}}
-                                <div>
+                                <div class="py-1">
                                     <b>Name: </b> {{team_name}}
                                 </div>
-                                <br>
+
                                 <div>
                                     {{#with team_leader}}
-                                    <div>{{name}} ({{title}})</div>
-                                    <br>
-                                    <div><a href>{{email}}</a></div>
-                                    <br>
+                                    <div class="py-2">{{name}} ({{title}})</div>
+
+                                    <div class="py-2"><a href>{{email}}</a></div>
+
                                     {{/with}}
                                     <section>
-                                        <div>
+                                        <div class="py-2">
                                             {{> title data="Team members:" big=null}}
                                         </div>
 
@@ -132,31 +132,31 @@
                                             {{#each team_members}}
                                             <ul>
                                                 <li>
-                                                    <div>{{name}} ({{title}})</div>
-                                                    <br>
-                                                    <div>
+                                                    <div class="py-1">{{name}} ({{title}})</div>
+
+                                                    <div class="py-1">
                                                         <a href>{{email}}</a>
                                                     </div>
-                                                    <br>
-                                                    <div>
-                                                        <div><b>Skills: </b></div>
-                                                        <br>
+
+                                                    <div class="py-1">
+                                                        <div class="py-1"><b>Skills: </b></div>
+
                                                         {{#each skills}}
                                                         <ul>
                                                             <li>{{this}} </li>
                                                         </ul>
                                                         {{/each}}
                                                     </div>
-                                                    <br>
+
                                                     <div>
-                                                        <div><b>Projects: </b></div>
-                                                        <br>
+                                                        <div class="py-1"><b>Projects: </b></div>
+
                                                         {{#each projects}}
-                                                        <div>
+                                                        <div class="py-1">
                                                             <ul>
                                                                 <li>{{name}}
                                                                     <p>Description: {{description}}</p>
-                                                                    <p>Technologies:
+                                                                    <p class="mb-1">Technologies:
                                                                         {{#each technologies}}
                                                                     <ul>
                                                                         <li>
@@ -168,12 +168,12 @@
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                        <br>
 
-                                                        <div>
-                                                            <div><b>Team members:</b></div>
 
-                                                            <br>
+                                                        <div class="py-3">
+                                                            <div class="py-1"><b>Team members:</b></div>
+
+
 
                                                             <div>
                                                                 {{#each team_members}}
@@ -190,7 +190,7 @@
                                                 </li>
                                             </ul>
 
-                                            <br>
+
 
                                             {{/each}}
                                         </div>

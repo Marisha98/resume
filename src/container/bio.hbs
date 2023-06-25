@@ -1,27 +1,25 @@
 <div>
-    <div>
+    <div class="py-2">
         <h1>{{name}}</h1>
     </div>
 
-    <br>
+    <div class="py-2"><b>Born: </b>{{birthdate}} / {{birthplace}}</div>
 
-    <div><b>Born: </b>{{birthdate}} / {{birthplace}}</div>
 
-    <br>
 
-    <div><b>Died: </b>{{deathdate}} / {{deathplace}}</div>
+    <div class="py-2"><b>Died: </b>{{deathdate}} / {{deathplace}}</div>
 
-    <br>
 
-    <div><b>Nationality: </b>{{nationality}}</div>
 
-    <br>
+    <div class="py-2"><b>Nationality: </b>{{nationality}}</div>
 
-    <div><b>Occupation: </b>{{occupation}}</div>
 
-    <br>
 
-    <div>
+    <div class="py-2"><b>Occupation: </b>{{occupation}}</div>
+
+
+
+    <div class="py-2">
         {{> title data="Known for:" big=false}}
 
         {{#each known_for}}
@@ -31,9 +29,9 @@
         {{/each}}
     </div>
 
-    <br>
 
-    <div>
+
+    <div class="py-2">
         {{> title data="Education:" big=false}}
 
         {{#each education}}
@@ -41,9 +39,9 @@
         {{/each}}
     </div>
 
-    <br>
 
-    <div>
+
+    <div class="py-2">
         {{> title data="Notable publications:" big=false}}
 
         {{#each notable_publications}}
@@ -53,7 +51,7 @@
         {{/each}}
     </div>
 
-    <div>
+    <div class="py-2">
         {{> title data="Partners:" big=false}}
 
         {{#each partners}}
@@ -64,7 +62,7 @@
     </div>
 
 
-    <div>
+    <div class="py-2">
         {{> title data="Awards:" big=false}}
 
         {{#each awards}}
@@ -72,9 +70,8 @@
         {{/each}}
     </div>
 
-    <br>
 
-    <div>
+    <div class="py-2">
         {{> title data="Influences:" big=false}}
 
         {{#each influences}}
@@ -84,9 +81,9 @@
         {{/each}}
     </div>
 
-    <br>
 
-    <div>
+
+    <div class="py-2">
         {{> title data="Influenced:" big=false}}
 
         {{#each influenced}}
@@ -96,9 +93,9 @@
         {{/each}}
     </div>
 
-    <br>
 
-    <div>
+
+    <div class="py-2">
         {{> title data="Quotes:" big=false}}
 
         {{#each quotes}}
@@ -108,7 +105,7 @@
         {{/each}}
     </div>
 
-    <div>
+    <div class="py-2">
         {{> title data="Major discoveries:" big=false}}
 
         {{#each major_discoveries}}
@@ -116,8 +113,8 @@
         {{/each}}
     </div>
 
-    <br>
-    <div>
+
+    <div class="py-2">
         {{> title data="Contributions:" big=false}}
 
         {{#with contributions}}

@@ -41,7 +41,19 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+
+    page: {
+      autor: 'Maryna Usyk',
+      title: 'Resume project',
+    },
+
+    listPages: {
+      header: 'Список сторінок',
+      description: 'Cторінки власноруч створені студентом',
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -143,6 +155,7 @@ router.get('/skills', function (req, res) {
 router.get('/education', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('education', {
+    layout: 'default',
     // ↙ сюди вводимо JSON дані
 
     page: {
@@ -464,7 +477,7 @@ router.get('/bio', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'program',
+    layout: 'basic',
 
     page: {
       title: 'Program page',

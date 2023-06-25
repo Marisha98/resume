@@ -1,10 +1,7 @@
-<main>
-    <div class="card">
+<div>
+    <div class="card by-2">
         <div class="card-body">
-
-
-
-            <div class="card">
+            <div class="card my-3">
                 <div class="card-body">
 
                     {{#with heading}}
@@ -13,36 +10,28 @@
 
                     <p>{{main.text}}</p>
 
-                    <button class="btn btn-primary">{{main.button_text.solid}}</button>
-
-                    <br>
-                    <br>
-
-                    <button class="btn btn-outline-primary">{{main.button_text.outline}}</button>
-
+                    <div class="py-2"><button class="btn btn-primary">{{main.button_text.solid}}</button></div>
+                    <div class="py-2"><button class="btn btn-outline-primary">{{main.button_text.outline}}</button>
+                    </div>
                 </div>
             </div>
 
-            <br>
 
-            <div class="card">
+
+            <div class="card my-3">
                 <div class="card-body">
 
                     <h2>{{second.title}}</h2>
 
                     <p>{{second.text}}</p>
 
-                    <button class="btn btn-secondary">{{second.button_text.solid}}</button>
-
-                    <br>
-                    <br>
-
-                    <button class="btn btn-outline-secondary">{{second.button_text.outline}}</button>
+                    <div class="py-2"><button class="btn btn-secondary">{{second.button_text.solid}}</button></div>
+                    <div class="py-2"><button class="btn btn-outline-secondary">{{second.button_text.outline}}</button>
+                    </div>
 
                 </div>
             </div>
 
-            <br>
 
             <div class="card">
                 <div class="card-body">
@@ -51,12 +40,9 @@
 
                     <p>{{subblock.text}}</p>
 
-                    <button class="btn btn-dark">{{subblock.button_text.solid}}</button>
-
-                    <br>
-                    <br>
-
-                    <button class="btn btn-outline-dark">{{subblock.button_text.outline}}</button>
+                    <div class="py-2"><button class="btn btn-dark">{{subblock.button_text.solid}}</button></div>
+                    <div class="py-2"><button class="btn btn-outline-dark">{{subblock.button_text.outline}}</button>
+                    </div>
 
                 </div>
             </div>
@@ -65,22 +51,21 @@
         </div>
     </div>
 
-    <br>
 
 
-    <div class="card">
+
+    <div class="card my-3">
         <div class="card-body">
 
             {{#with nested_display}}
 
             <div class="display-1">{{title}}</div>
 
-            <div class="card">
+            <div class="card py-2">
                 <div class="card-body">
 
-                    <div class="display-4">{{children_display.title}}</div>
+                    <div class="display-4 py-2">{{children_display.title}}</div>
 
-                    <br>
 
                     <p>{{children_display.text}}</p>
 
@@ -89,9 +74,9 @@
                 </div>
             </div>
 
-            <br>
 
-            <h6>{{header_text}}</h6>
+
+            <h6 class="py-2 mt-2">{{header_text}}</h6>
 
             <button type="button" class="btn btn-info">{{button.text}}</button>
 
@@ -99,7 +84,7 @@
         </div>
     </div>
 
-    <br>
+
 
     <div class="card">
         <div class="card-body">
@@ -110,12 +95,11 @@
 
             <p>{{text}}</p>
 
-            <a href="{{button.url}}" class="text-primaty">{{button.text}}</a>
+            <a href="{{button.url}}" class="text-primary">{{button.text}}</a>
 
-            <br>
-            <br>
 
-            <div class="card">
+
+            <div class="card my-2">
                 <div class="card-body">
 
                     {{#each list_name}}
@@ -134,4 +118,4 @@
             {{/with}}
         </div>
     </div>
-</main>
+</div>

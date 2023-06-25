@@ -1,18 +1,17 @@
 <div>
     {{#with elements}}
-    <div>Elements:</div>
-    <br>
+    <div class="py-2">Elements:</div>
+
     {{/with}}
 
     <ol>
         {{#each elements}}
         <li>
             <div>Tag- "{{name}}"</div>
-            <br>
+
 
             <div>{{description}}</div>
 
-            <br>
 
             <section>
                 <div><i>Attributes:</i>
@@ -29,19 +28,18 @@
 
 <div>
     {{#with properties}}
-    <div>Properties:</div>
-    <br>
+    <div class="py-2">Properties:</div>
+
     {{/with}}
 
     <ol>
         {{#each properties}}
         <li>
             <div>"{{name}}"</div>
-            <br>
+
 
             <div>{{description}}</div>
 
-            <br>
 
             <section>
                 <div><i>Values:</i>
@@ -58,8 +56,8 @@
 
 <div>
     {{#with functions}}
-    <div>Functions:</div>
-    <br>
+    <div class="py-2">Functions:</div>
+
     {{/with}}
 
     <ol>
@@ -67,11 +65,9 @@
         <li>
             <div>"{{name}}"</div>
 
-            <br>
 
             <div>{{description}}</div>
 
-            <br>
 
             <section>
                 <div><i>Parametrs:</i>
